@@ -536,6 +536,7 @@
   ```
 
   ```html
+  <!-- avoid -->
   <!-- avengers.html -->
   <div ng-controller="Avengers as vm">
   </div>
