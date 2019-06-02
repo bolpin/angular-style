@@ -1262,12 +1262,6 @@ Note: The code example's dependency on `movieService` is not minification safe o
 
     *Why?*  The parameters to the component (e.g. controller, factory, etc) will be converted to mangled variables. For example, `common` and `dataservice` may become `a` or `b` and not be found by Angular.
 
-    ```coffeescript
-    # avoid - not minification-safe
-    TODO
-    ```
-
-    This code may produce mangled variables when minified and thus cause runtime errors.
 
 ### Manually Identify Dependencies
 ###### [Style [Y091](#style-y091)]
@@ -1385,14 +1379,12 @@ Note: When your function is below a return statement the `$inject` may be unreac
 ### ng-annotate
 ###### [Style [Y100](#style-y100)]
 
-  - Use [ng-annotate](//github.com/olov/ng-annotate) for [Gulp](http://gulpjs.com) or [Grunt](http://gruntjs.com) and comment functions that need automated dependency injection using `/** @ngInject */`
+  - Use [ng-annotate](//github.com/olov/ng-annotate) for [Gulp](http://gulpjs.com) and comment functions that need automated dependency injection using `/** @ngInject */`
 
     *Why?*  This safeguards your code from any dependencies that may not be using minification-safe practices.
 
     *Why?*  ['ng-min'](https://github.com/btford/ngmin) is deprecated
-
-    >I prefer Gulp as I feel it is easier to write, to read, and to debug.
-
+    
     The following code is not using minification safe dependencies.
 
 ```coffeescript
@@ -1453,7 +1445,7 @@ Note: When using a route resolver you can prefix the resolver's function with `/
     
 ```<body ng-app="APP" ng-strict-di>```
 
-### Use Gulp or Grunt for ng-annotate
+### Use Gulp for ng-annotate
 ###### [Style [Y101](#style-y101)]
 
 **[Back to top](#table-of-contents)**
