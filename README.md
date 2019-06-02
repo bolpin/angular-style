@@ -1070,7 +1070,7 @@ Note: There are many naming options for directives, especially since they can be
   <div>min={{vm.min}}<input ng-model="vm.min"/></div>
   ```
 
-    Note: You can also name the controller when you inject it into the link function and access directive attributes as properties of the controller.
+Note: You can also name the controller when you inject it into the link function and access directive attributes as properties of the controller.
 
   ```coffeescript
   # Alternative to above example
@@ -1226,7 +1226,7 @@ Note: There are many naming options for directives, especially since they can be
     vm.movies = moviesPrepService.movies
   ```
 
-    Note: The example below shows the route resolve points to a named function, which is easier to debug and easier to handle dependency injection.
+Note: The example below shows the route resolve points to a named function, which is easier to debug and easier to handle dependency injection.
 
   ```coffeescript
   # even better 
@@ -1257,7 +1257,7 @@ Note: There are many naming options for directives, especially since they can be
     vm = this
     vm.movies = moviesPrepService.movies
   ```
-    Note: The code example's dependency on `movieService` is not minification safe on its own. For details on how to make this code minification safe, see the sections on [dependency injection](#manual-annotating-for-dependency-injection) and on [minification and annotation](#minification-and-annotation).
+Note: The code example's dependency on `movieService` is not minification safe on its own. For details on how to make this code minification safe, see the sections on [dependency injection](#manual-annotating-for-dependency-injection) and on [minification and annotation](#minification-and-annotation).
 
 **[Back to top](#table-of-contents)**
 
@@ -1331,7 +1331,7 @@ Note: There are many naming options for directives, especially since they can be
     ]
     ```
 
-    Note: When your function is below a return statement the `$inject` may be unreachable (this may happen in a directive). You can solve this by moving the Controller outside of the directive.
+Note: When your function is below a return statement the `$inject` may be unreachable (this may happen in a directive). You can solve this by moving the Controller outside of the directive.
 
     ```coffeescript
     # avoid
@@ -1418,7 +1418,7 @@ Note: There are many naming options for directives, especially since they can be
         storageService.save hero.name, hero
     ```
 
-    When the above code is run through ng-annotate it will produce the following output with the `$inject` annotation and become minification-safe.
+When the above code is run through ng-annotate it will produce the following output with the `$inject` annotation and become minification-safe.
 
     ```coffeescript
     angular
@@ -1441,9 +1441,9 @@ Note: There are many naming options for directives, especially since they can be
     ]
     ```
 
-    Note: If `ng-annotate` detects injection has already been made (e.g. `@ngInject` was detected), it will not duplicate the `$inject` code.
+Note: If `ng-annotate` detects injection has already been made (e.g. `@ngInject` was detected), it will not duplicate the `$inject` code.
 
-    Note: When using a route resolver you can prefix the resolver's function with `/* @ngInject */` and it will produce properly annotated code, keeping any injected dependencies minification safe.
+Note: When using a route resolver you can prefix the resolver's function with `/* @ngInject */` and it will produce properly annotated code, keeping any injected dependencies minification safe.
 
     ```coffeescript
     # Using @ngInject annotations
