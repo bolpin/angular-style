@@ -1444,7 +1444,7 @@ Note: If `ng-annotate` detects injection has already been made (e.g. `@ngInject`
 
 Note: When using a route resolver you can prefix the resolver's function with `/* @ngInject */` and it will produce properly annotated code, keeping any injected dependencies minification safe.
 
-    ```coffeescript
+```coffeescript
     # Using @ngInject annotations
     config = ($routeProvider) ->
       $routeProvider.when '/avengers',
@@ -1453,10 +1453,11 @@ Note: When using a route resolver you can prefix the resolver's function with `/
         controllerAs: 'vm'
         resolve: moviesPrepService: (movieService) -> #ngInject
           movieService.getMovies()
-    ```
+```
 
-    > Note: Starting from Angular 1.3 you can use the ['ngApp'](https://docs.angularjs.org/api/ng/directive/ngApp) directive's `ngStrictDi` parameter to detect any potentially missing minification safe dependencies. When present the injector will be created in "strict-di" mode causing the application to fail to invoke functions which do not use explicit function annotation (these may not be minification safe). Debugging info will be logged to the console to help track down the offending code. I prefer to only use `ng-strict-di` for debugging purposes only.
-    `<body ng-app="APP" ng-strict-di>`
+> Note: Starting from Angular 1.3 you can use the ['ngApp'](https://docs.angularjs.org/api/ng/directive/ngApp) directive's `ngStrictDi` parameter to detect any potentially missing minification safe dependencies. When present the injector will be created in "strict-di" mode causing the application to fail to invoke functions which do not use explicit function annotation (these may not be minification safe). Debugging info will be logged to the console to help track down the offending code. I prefer to only use `ng-strict-di` for debugging purposes only.
+    
+```<body ng-app="APP" ng-strict-di>```
 
 ### Use Gulp or Grunt for ng-annotate
 ###### [Style [Y101](#style-y101)]
