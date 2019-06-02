@@ -1136,8 +1136,7 @@ Note: You can also name the controller when you inject it into the link function
 
     *Why?*  The controller `activate` makes it convenient to re-use the logic for a refresh for the controller/View, keeps the logic together, gets the user to the View faster, makes animations easy on the `ng-view` or `ui-view`, and feels snappier to the user.
 
-    Note: If you need to conditionally cancel the route before you start use the controller, use a [route resolve](#style-y081) instead.
-    Note: If you need to conditionally cancel the route before you start use the controller, use a [route resolve](#style-y081) instead.
+Note: If you need to conditionally cancel the route before you start to use the controller, use a [route resolve](#style-y081) instead.
 
   ```coffeescript
   # avoid
