@@ -1,6 +1,7 @@
-# AngularJS (Angular 1.x) Style Guide
+# AngularJS (Angular 1.x) Style Guide, with examples in Coffeescript
 
-* This is based on John Papa's [Opinionated Angular (Angular 1.x) style guide](https://github.com/johnpapa/angular-styleguide).
+* This is based on John Papa's [Opinionated Angular (Angular 1.x) style guide](https://github.com/johnpapa/angular-styleguide)
+* Examples have been translated to Coffeescript
 
 ## Table of Contents
 
