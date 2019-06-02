@@ -1401,7 +1401,7 @@ Note: When your function is below a return statement the `$inject` may be unreac
 
     The following code is not using minification safe dependencies.
 
-    ```coffeescript
+```coffeescript
     angular
       .module('app')
       .controller('Avengers', Avengers)
@@ -1415,11 +1415,11 @@ Note: When your function is below a return statement the `$inject` may be unreac
       storeHero = ->
         hero = avengerService.find(vm.heroSearch)
         storageService.save hero.name, hero
-    ```
+```
 
 When the above code is run through ng-annotate it will produce the following output with the `$inject` annotation and become minification-safe.
 
-    ```coffeescript
+```coffeescript
     angular
       .module('app')
       .controller('Avengers', Avengers)
@@ -1438,7 +1438,7 @@ When the above code is run through ng-annotate it will produce the following out
       'storageService'
       'avengerService'
     ]
-    ```
+```
 
 Note: If `ng-annotate` detects injection has already been made (e.g. `@ngInject` was detected), it will not duplicate the `$inject` code.
 
