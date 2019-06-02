@@ -1045,21 +1045,14 @@ Note: There are many naming options for directives, especially since they can be
       bindToController: true
 
     linkFunc = (scope, el, attr, ctrl) ->
-      console.log 'LINK: scope.min = %s *** should be undefined', scope.min
-      console.log 'LINK: scope.max = %s *** should be undefined', scope.max
       console.log 'LINK: scope.vm.min = %s', scope.vm.min
       console.log 'LINK: scope.vm.max = %s', scope.vm.max
 
     directive
 
-  ExampleController.$inject = [ '$scope' ]
-
-  ExampleController = ($scope) ->
-    # Injecting $scope just for comparison
+  ExampleController = ->
     vm = this
     vm.min = 3
-    console.log 'CTRL: $scope.vm.min = %s', $scope.vm.min
-    console.log 'CTRL: $scope.vm.max = %s', $scope.vm.max
     console.log 'CTRL: vm.min = %s', vm.min
     console.log 'CTRL: vm.max = %s', vm.max
   ```
